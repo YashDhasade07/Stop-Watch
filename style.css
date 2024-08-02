@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: white
+}
+
+/* Common Property class */
+.flex{
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #030823;
+}
+
+.stopwatch {
+  position: relative;
+  background-color: black;
+  height: 13rem;
+  width: 26rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+
+/* CSS For Colorfull-Border */
+.stopwatch::after ,.stopwatch::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(#ff4545,#00ff99,#006aff,#ff0095,#ff4545);
+  top: -1.5%;
+  left: -0.78%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.stopwatch::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+/* Time Text */
+.stopwatch h1{
+  margin: 43px 0;
+  font-size: 2.4rem;
+}
+
+
+/* CSS Buttons */
+button{
+  width: 85px;
+    height: 34px;
+    margin: 0 11px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.start{
+  background-color: rgb(48, 165, 48);
+}
+.start:hover{
+  background-color: rgb(2, 111, 2);
+}
+.stop{
+  background-color: red;
+}
+.stop:hover{
+  background-color: rgb(130, 9, 9);
+}
+.reset{
+  background-color: rgb(255, 119, 0) ;
+}
+.reset:hover{
+  background-color: rgb(154, 76, 8) ;
+}
+
